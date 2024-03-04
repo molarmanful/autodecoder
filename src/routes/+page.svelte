@@ -51,8 +51,9 @@
           let aa = document.createElement('div')
           c.after(aa)
           aa.prepend(a, c)
-          if (c.src) {
-            fetch(c.src).then(async res => {
+          let src = c.src || c.href
+          if (src) {
+            fetch(src).then(async res => {
               let txt = await res.text()
               aa.append(txt)
               if (nonvoid.includes(t)) aa.append(b)
@@ -69,15 +70,18 @@
 </script>
 
 <svelte:head>
-  <title>autodecoder</title>
+  <title>barebones</title>
 </svelte:head>
 
 <h1>test</h1>
 <img alt="test" src="https://i.imgur.com/w8pK4DY.png" />
 
 <style>
-  :global(*:not(meta, script)) {
-    @apply flex flex-wrap flex-items-center border-1 border-solid border-gray m-1 p-1;
+  :global(*) {
+    @apply flex flex-wrap flex-items-center border-1 border-solid border-gray m-1 p-1 whitespace-pre-wrap break-all;
+  }
+  :global(meta, script, link) {
+    @apply hidden;
   }
 
   :global([data-tag]) {
@@ -85,7 +89,7 @@
   }
 
   :root {
-    @apply whitespace-pre-wrap bg-black text-white;
+    @apply bg-black text-white;
     font-family: monospace;
   }
 </style>
