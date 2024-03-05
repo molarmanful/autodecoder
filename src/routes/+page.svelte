@@ -44,10 +44,16 @@
         ).join``}>`
 
         let src = el.src || el.href
-        if (src && t == 'SCRIPT') {
-          fetch(src).then(async r => {
-            el.textContent = await r.text()
-          })
+        if (src) {
+          if (t == 'LINK') {
+            fetch(src).then(async r => {
+              el.dataset.value = await r.text()
+            })
+          } else if (t == 'SCRIPT') {
+            fetch(src).then(async r => {
+              el.textContent = await r.text()
+            })
+          }
         }
 
         if (!ignore.includes(t) && !el.dataset.after) {
@@ -56,8 +62,8 @@
       }
     }
 
-    document.head.style.top = randint(4) - 2 + 'px'
-    document.head.style.left = randint(4) - 2 + 'px'
+    document.head.style.top = (randint(2) - 1) * 2 + 'px'
+    document.head.style.left = (randint(2) - 1) * 2 + 'px'
   }
 
   onMount(() => {
@@ -115,7 +121,7 @@
   }
 
   :global(head) {
-    @apply absolute top-0 left-0 z-10 pointer-events-none text-blue;
+    @apply absolute top-0 left-0 z-10 pointer-events-none text-gray;
   }
 
   :global(x-tag) {
