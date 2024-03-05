@@ -20,10 +20,7 @@
     'SOURCE',
     'TRACK',
     'WBR',
-    // 'STYLE',
-    // 'SCRIPT',
   ]
-  // let nonvoid = ['STYLE', 'SCRIPT']
   let g_t = 1
 
   if (browser) {
