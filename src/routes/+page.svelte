@@ -20,10 +20,11 @@
     'SOURCE',
     'TRACK',
     'WBR',
-    'STYLE',
-    'SCRIPT',
+    // 'STYLE',
+    // 'SCRIPT',
   ]
-  let nonvoid = ['STYLE', 'SCRIPT']
+  // let nonvoid = ['STYLE', 'SCRIPT']
+  let g_t = 1
 
   if (browser) {
     history.scrollRestoration = 'manual'
@@ -32,40 +33,15 @@
   let deco = () => {
     for (let el of document.querySelectorAll('*')) {
       let t = el.tagName
-      if (t == 'X-TAG') {
-        el.remove()
-      } else if (t == 'X-NODE') {
-        el.replaceWith(el.querySelector('[data-orig]'))
-      } else if (t) {
-        let a = document.createElement('x-tag')
-        a.innerText = `<${t}${
-          el.hasAttributes()
-            ? ' ' +
-              [...el.attributes].map(
-                a => a.name + '=' + JSON.stringify(a.value)
-              ).join` `
-            : ''
-        }>`
+      if (t) {
+        el.dataset.before = `<${t.toLowerCase()}${[...el.attributes].map(a =>
+          ['data-before', 'data-after'].includes(a.name)
+            ? ''
+            : ` ${a.name}=${JSON.stringify(a.value)}`
+        ).join``}>`
 
-        let b = document.createElement('x-tag')
-        b.innerText = `</${t}>`
-
-        if (ignore.includes(t)) {
-          let aa = document.createElement('x-node')
-          el.dataset.orig = ''
-          el.before(aa)
-          aa.prepend(a, el)
-          let src = el.src || el.href
-          if (src) {
-            fetch(src).then(async res => {
-              let txt = await res.text()
-              aa.append(txt)
-              if (nonvoid.includes(t)) aa.append(b)
-            })
-          } else if (nonvoid.includes(t)) aa.append(b)
-        } else {
-          el.prepend(a)
-          el.append(b)
+        if (!ignore.includes(t) && !el.dataset.after) {
+          el.dataset.after = `</${t.toLowerCase()}>`
         }
       }
     }
@@ -73,10 +49,15 @@
 
   onMount(() => {
     scrollTo(0, 0)
+
     let f = () => {
-      deco()
+      g_t--
+      if (g_t <= 0) {
+        deco()
+        g_t = 10
+      }
       requestAnimationFrame(() => {
-        setTimeout(f, 1e4)
+        setTimeout(f, 999)
       })
     }
     f()
@@ -89,13 +70,23 @@
 
 <h1>loading...</h1>
 <img alt="test" src="https://i.imgur.com/w8pK4DY.png" />
+<div class="fixed right-0 top-0 text-red">{g_t}</div>
 
 <style>
-  :global(*) {
+  :global(*, [data-before]::before, [data-after]::after) {
     @apply flex flex-wrap flex-items-center border-1 border-solid border-gray m-1 p-1 whitespace-pre-wrap break-all;
   }
-  :global(meta, script, link) {
-    @apply hidden;
+
+  :global([data-before]::before, [data-after]::after) {
+    @apply text-gray b-1 b-solid b-gray;
+  }
+
+  :global([data-before]::before) {
+    content: attr(data-before);
+  }
+
+  :global([data-after]::after) {
+    content: attr(data-after);
   }
 
   :global(x-tag) {
