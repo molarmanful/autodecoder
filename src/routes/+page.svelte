@@ -55,6 +55,9 @@
         }
       }
     }
+
+    document.head.style.top = randint(4) - 2 + 'px'
+    document.head.style.left = randint(4) - 2 + 'px'
   }
 
   onMount(() => {
@@ -81,7 +84,7 @@
 <h1>all i have are</h1>
 <h1>BONES</h1>
 <ImgSpam alt="test" src="https://i.imgur.com/w8pK4DY.png" />
-{#each new Array(randint(100)) as _}
+{#each new Array(randint(70) + 30) as _}
   <ImgSpam
     alt="test"
     src="https://picsum.photos/{randint(800)}/{randint(800)}"
