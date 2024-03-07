@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
 
   import { browser } from '$app/environment'
-  import { ImgSpam } from '$lib'
+  import { ImgSpam, SpamSet, randint } from '$lib'
 
   let ignore = [
     'AREA',
@@ -27,11 +27,6 @@
   if (browser) {
     history.scrollRestoration = 'manual'
   }
-
-  let randint = n => 0 | (Math.random() * n)
-  let randitem = a => a[randint(a.length)]
-  let randchar = () =>
-    randitem('0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM')
 
   let deco = () => {
     for (let el of document.querySelectorAll('*')) {
@@ -90,12 +85,9 @@
 <h1>all i have are</h1>
 <h1>BONES</h1>
 <ImgSpam alt="test" src="https://i.imgur.com/w8pK4DY.png" />
-{#each new Array(randint(70) + 30) as _}
-  <ImgSpam
-    alt="test"
-    src="https://picsum.photos/{randint(800)}/{randint(800)}"
-  />
-{/each}
+<SpamSet />
+<p>{'BONES '.repeat(1000)}</p>
+<SpamSet />
 <div class="fixed right-0 top-0 text-red">{g_t}</div>
 
 <style>
