@@ -71,7 +71,7 @@
       },
       () => {
         scrollTo({
-          top: randint(document.documentElement.scrollHeight),
+          top: randint(document.body.scrollHeight),
           behavior: 'smooth',
         })
       },
