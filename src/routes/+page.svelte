@@ -70,7 +70,10 @@
         location.reload()
       },
       () => {
-        scrollTo(0, randint(document.documentElement.scrollHeight))
+        scrollTo({
+          top: randint(document.documentElement.scrollHeight),
+          behavior: 'smooth',
+        })
       },
       el => {
         el.remove()
