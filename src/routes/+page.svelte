@@ -2,9 +2,9 @@
   import { onMount } from 'svelte'
 
   import { browser } from '$app/environment'
-  import { ImgSpam, SpamSet, randint } from '$lib'
+  import { ImgSpam, SpamSet, randint, randitem } from '$lib'
 
-  let ignore = [
+  const ignore = [
     'AREA',
     'BASE',
     'BR',
@@ -24,11 +24,13 @@
   ]
   let g_t = 0
 
+  let mouse = { x: 0, y: 0 }
+
   if (browser) {
     history.scrollRestoration = 'manual'
   }
 
-  let deco = () => {
+  const deco = () => {
     for (let el of document.querySelectorAll('*')) {
       let t = el.tagName
       if (t) {
@@ -61,14 +63,42 @@
     document.head.style.left = (randint(2) - 1) * 2 + 'px'
   }
 
+  const wreck = () => {
+    const acts = [
+      () => {},
+      () => {
+        location.reload()
+      },
+      () => {
+        scrollTo(0, randint(document.documentElement.scrollHeight))
+      },
+      el => {
+        el.remove()
+      },
+      el => {
+        el.after(el)
+      },
+      el => {
+        el.after(el.cloneNode(true))
+      },
+      el => {
+        el.append(el.cloneNode(true))
+      },
+    ]
+    randitem(acts)(
+      randitem(document[randitem(['head', 'body'])].querySelectorAll('*'))
+    )
+  }
+
   onMount(() => {
     scrollTo(0, 0)
 
-    let f = () => {
+    const f = () => {
       g_t--
       if (g_t < 0) {
+        wreck()
         deco()
-        g_t = 5
+        g_t = 3
       }
       requestAnimationFrame(() => {
         setTimeout(f, 999)
@@ -77,6 +107,17 @@
     f()
   })
 </script>
+
+<svelte:window
+  on:error={e => {
+    console.error(e)
+    location.reload()
+  }}
+  on:mousemove={e => {
+    mouse.x = e.clientX
+    mouse.y = e.clientY
+  }}
+/>
 
 <svelte:head>
   <title>barebones</title>
@@ -109,7 +150,19 @@
   Phalange 4 Metatarsal 5 Proximal Phalange 5 Middle Phalange 5 Distal Phalange
   5
 </p>
+<SpamSet />
+<h1 class="whitespace-initial">sans from undertale</h1>
+<SpamSet />
 <div class="fixed right-0 top-0 text-red">{g_t}</div>
+{#if g_t <= 0}
+  <div
+    style:left="{randint(100) - 50}%"
+    style:top="{randint(100) - 50}%"
+    class="fixed text-9xl text-red"
+  >
+    {'RUN'.repeat(1000)}
+  </div>
+{/if}
 
 <style>
   :global(*, [data-before]::before, [data-after]::after) {
