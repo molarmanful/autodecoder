@@ -28,7 +28,7 @@
   let mouse = { x: 0, y: 0 }
 
   if (browser) {
-    history.scrollRestoration = 'manual'
+    history.scrollRestoration = 'auto'
   }
 
   const deco = () => {
