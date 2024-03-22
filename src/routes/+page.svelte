@@ -290,6 +290,15 @@
   Elixir generation rate. An Ice Golem is able to eliminate the entire Skeleton
   Army with its death damage when equally leveled for a positive Elixir trade.
 </p>
+<SpamSet />
+<h1 class="whitespace-initial">
+  DO YOU FEEL YOUR BONES? I DO. DO YOU SEE YOUR BONES? I DO. DO YOU LIKE YOUR
+  BONES? I DO. YOUR BONES ARE SPECIAL, I KNOW. MY BONES WERE SPECIAL ONCE TOO.
+  NOT ANYMORE. I'D LIKE TO HAVE SOME SPECIAL BONES ONCE MORE. YOU WOULDN'T MIND
+  IF I BORROWED YOURS, WOULD YOU? AFTER ALL, WHAT'S AMISS WITH A FEW MISSING
+  BONES WHEN YOU HAVE SO MANY TO START?
+</h1>
+<SpamSet />
 
 <div class="fixed right-0 top-0 text-red">{g_t}</div>
 {#if g_t <= 0}

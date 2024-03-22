@@ -1,5 +1,5 @@
 <script>
-  import { ImgSpam, randint } from '.'
+  import { ImgSpam, counter, randint } from '.'
 
   export let a = 5
   export let b = 5
@@ -8,7 +8,6 @@
 {#each new Array(randint(b) + a) as _}
   <ImgSpam
     alt="test"
-    src="https://picsum.photos/{(randint(7) + 1) * 100}/{(randint(7) + 1) *
-      100}"
+    src={`https://source.unsplash.com/random/${(randint(6) + 1) * 100}x${(randint(6) + 1) * 100}#${Date.now()}`}
   />
 {/each}
