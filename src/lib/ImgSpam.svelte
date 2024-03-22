@@ -18,12 +18,14 @@
     crossorigin="anonymous"
     loading="lazy"
     {src}
-    on:load={() => {
-      const cvs = document.createElement('canvas')
-      cvs.width = el.width
-      cvs.height = el.height
-      cvs.getContext('2d').drawImage(el, 0, 0)
-      txt = cvs.toDataURL()
+    on:load={async () => {
+      requestAnimationFrame(() => {
+        const cvs = document.createElement('canvas')
+        cvs.width = el.width
+        cvs.height = el.height
+        cvs.getContext('2d').drawImage(el, 0, 0)
+        txt = cvs.toDataURL()
+      })
     }}
   />
   <figcaption class="absolute inset-0 overflow-auto text-gray">

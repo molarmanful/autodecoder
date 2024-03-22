@@ -66,32 +66,36 @@
 
   const wreck = () => {
     const acts = [
-      () => {},
-      () => {
-        scrollTo({
-          top: randint(document.body.scrollHeight),
-          behavior: 'smooth',
-        })
-      },
-      el => {
-        el.remove()
-      },
-      el => {
-        el.after(el)
-      },
-      el => {
-        el.after(el.cloneNode(true))
-      },
-      el => {
-        el.append(el.cloneNode(true))
-      },
-      el => {
-        el.after(el.nextSibling)
-      },
-      el => {
-        el.before(el.previousSibling)
-      },
-      ...Array(2)
+      ...Array(1)
+        .fill([
+          () => {},
+          () => {
+            scrollTo({
+              top: randint(document.body.scrollHeight),
+              behavior: 'smooth',
+            })
+          },
+          el => {
+            el.remove()
+          },
+          el => {
+            el.after(el)
+          },
+          el => {
+            el.after(el.cloneNode(true))
+          },
+          el => {
+            el.append(el.cloneNode(true))
+          },
+          el => {
+            el.after(el.nextSibling)
+          },
+          el => {
+            el.before(el.previousSibling)
+          },
+        ])
+        .flat(),
+      ...Array(1)
         .fill([
           () => {
             document.documentElement.style.backgroundColor = randrgb()
