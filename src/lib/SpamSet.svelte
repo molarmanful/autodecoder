@@ -8,6 +8,7 @@
 {#each new Array(randint(b) + a) as _}
   <ImgSpam
     alt="test"
-    src="https://picsum.photos/{randint(800)}/{randint(800)}"
+    src="https://picsum.photos/{(randint(7) + 1) * 100}/{(randint(7) + 1) *
+      100}"
   />
 {/each}
