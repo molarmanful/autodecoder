@@ -68,9 +68,6 @@
     const acts = [
       () => {},
       () => {
-        location.reload()
-      },
-      () => {
         scrollTo({
           top: randint(document.body.scrollHeight),
           behavior: 'smooth',

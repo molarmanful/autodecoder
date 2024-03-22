@@ -8,6 +8,6 @@
 {#each new Array(randint(b) + a) as _}
   <ImgSpam
     alt="test"
-    src={`https://source.unsplash.com/random/${(randint(6) + 1) * 100}x${(randint(6) + 1) * 100}#${Date.now()}`}
+    src={`https://source.unsplash.com/random/${(randint(12) + 1) * 50}x${(randint(12) + 1) * 50}#${Date.now()}`}
   />
 {/each}
