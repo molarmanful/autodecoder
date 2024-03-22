@@ -91,17 +91,27 @@
       el => {
         el.before(el.previousSibling)
       },
-      el => {
-        el.style.backgroundColor = randrgb()
-      },
-      el => {
-        el.style.color = randrgb()
-      },
-      el => {
-        el.style.fontSize = getComputedStyle(el)
-          .getPropertyValue('font-size')
-          .replace(/\d+/, n => Math.round(+n + randint(n) - n / 2))
-      },
+      ...Array(2)
+        .fill([
+          () => {
+            document.documentElement.style.backgroundColor = randrgb()
+          },
+          () => {
+            document.documentElement.style.color = randrgb()
+          },
+          el => {
+            el.style.backgroundColor = randrgb()
+          },
+          el => {
+            el.style.color = randrgb()
+          },
+          el => {
+            el.style.fontSize = getComputedStyle(el)
+              .getPropertyValue('font-size')
+              .replace(/\d+/, n => Math.round(+n + randint(n) - n / 2))
+          },
+        ])
+        .flat(),
     ]
     randitem(acts)(
       randitem(document[randitem(['head', 'body'])].querySelectorAll('*'))

@@ -9,7 +9,7 @@
   let txt = ''
 </script>
 
-<figure class="relative max-h-1/2 max-w-1/2">
+<figure class="relative max-h-3/10 max-w-3/10">
   <img
     bind:this={el}
     class="max-full"
