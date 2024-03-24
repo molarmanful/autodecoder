@@ -1,5 +1,5 @@
 <script>
-  import { ImgSpam, randitem, randint } from '.'
+  import { ImgSpam, randint, randitem } from '.'
 
   export let a = 5
   export let b = 5
