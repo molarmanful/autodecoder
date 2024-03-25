@@ -116,6 +116,21 @@
           },
           el => {
             const xs = [
+              'Comic Sans MS',
+              'Arial, sans-serif',
+              'Verdana, sans-serif',
+              'Tahoma, sans-serif',
+              '"Trebuchet MS", sans-serif',
+              '"Times New Roman", serif',
+              'Georgia, serif',
+              'Garamond, serif',
+              '"Courier New", Courier, monospace',
+              '"Brush Script MT", cursive',
+            ]
+            el.style.fontFamily = randitem(xs)
+          },
+          el => {
+            const xs = [
               'normal',
               'multiply',
               'screen',
