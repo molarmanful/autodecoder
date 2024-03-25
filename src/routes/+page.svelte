@@ -114,6 +114,27 @@
               .getPropertyValue('font-size')
               .replace(/\d+/, n => Math.round(+n + randint(n) - n / 2))
           },
+          el => {
+            const xs = [
+              'normal',
+              'multiply',
+              'screen',
+              'overlay',
+              'darken',
+              'lighten',
+              'color-dodge',
+              'color-burn',
+              'hard-light',
+              'soft-light',
+              'difference',
+              'exclusion',
+              'hue',
+              'saturation',
+              'color',
+              'luminosity',
+            ]
+            el.style.mixBlendMode = randitem(xs)
+          },
         ])
         .flat(),
     ]
