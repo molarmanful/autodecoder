@@ -205,8 +205,10 @@
 <h1>BONES</h1>
 <ImgSpam alt="test" src="https://i.imgur.com/w8pK4DY.png" />
 <SpamSet />
+
 <p>{'BONES '.repeat(1000)}</p>
 <SpamSet />
+
 <h3 class="whitespace-initial">
   Nasal Lacrimal Inferior Nasal Concha Maxillary Zygomatic Temporal Palatine
   Parietal Malleus Incus Stapes Frontal Ethmoid Vomer Sphenoid Mandible
@@ -229,19 +231,20 @@
   5
 </h3>
 <SpamSet />
+
 <p class="whitespace-initial">
-  Bony ( ID 227.0 ) is a monster class in the Binding of Isaac that resemble
-  human skeletons respectively. They are one of the enemies stemming from the
-  base game from 2011, and remain in the newest irritation, The Binding of Isaac
-  Repentance. They have base hp of 8 and a stage hp of 2, making them very
+  Bony (ID 227.0) is a monster class in the Binding of Isaac that resemble human
+  skeletons respectively. They are one of the enemies stemming from the base
+  game from 2011, and remain in the newest iteration, The Binding of Isaac
+  Repentance. They have base HP of 8 and a stage HP of 2, making them very
   susceptible to damage. Although being very fragile, they are nimble and agile,
   making them tricky to hit without a fast tear rate or homing tears to most new
-  players. On top of being fast , they throw bone projectiles at the player from
+  players. On top of being fast, they throw bone projectiles at the player from
   a great distance and at near light speed. Why am I losing angel deals to this
   anorexic creature. Edmund Mcmillen, a feeble procreator, made a less than
-  acceptable , worthless item with his game The Binding of Isaac. I will
+  acceptable, worthless item with his game The Binding of Isaac. I will
   transform into my refund that i will get back from buying the game, I desire
-  that you ( incomprehensible) for the next time a cow on a trash agricultural
+  that you (incomprehensible) for the next time a cow on a trash agricultural
   production site you item of crystalized sugar on a birchwood stick. They are
   found in mines, sacred womb, cathedral, ashpit, the depths, necropolis, dark
   room, dank depths, mausoleum, gehenna, the chest, the womb, the caves, utero,
@@ -249,9 +252,14 @@
   variants, champions and can be spawned by bosses and sub bosses.
 </p>
 <SpamSet />
+
 <h1 class="whitespace-initial">sans from undertale</h1>
 <SpamSet />
-<h2 class="whitespace-initial">
+
+<h2
+  class="whitespace-initial"
+  data-cite="Manchester Community College (MCC) | Essentials of Anatomy and Physiology (BIOL 106) | The_Skeletal_System | Introduction to the Skeletal System"
+>
   The skull and cross-bones symbol has been used for a very long time to
   represent death, perhaps because after death and decomposition, bones are all
   that remain. Many people think of bones as being dead, dry, and brittle. These
@@ -260,6 +268,19 @@
   strong and flexible. Bones are the major organs of the skeletal system.
 </h2>
 <SpamSet />
+
+<p class="whitespace-initial">
+  Osteomancy is a form of divination that involves the use of bones to predict
+  the future or gain insights into various questions or dilemmas. This practice
+  is ancient and has been found in various cultures around the world, each with
+  its unique methods and interpretations. The bones used can range from those of
+  small animals to human bones, depending on the culture and specific practices
+  of the diviner. The process of reading the bones typically involves
+  interpreting their arrangement, shapes, and marks after being thrown or placed
+  in specific patterns.
+</p>
+<SpamSet />
+
 <pre>
 ░░░░░░░░░░░░▄▐░░░░░░
 ░░░░░░▄▄▄░░▄██▄░░░░░
@@ -280,6 +301,7 @@
 ░░░░░█░░░░░░░░░░▐▌░░ SEND THIS TO 4 PPL OR SKELINTONS WILL EAT YOU 
 </pre>
 <SpamSet />
+
 <p class="whitespace-initial">
   The Skeleton Army card is unlocked from the Bone Pit (Arena 2). It spawns 15
   single-target, melee Skeletons with very low hitpoints and low damage, with an
@@ -338,6 +360,19 @@
   Army with its death damage when equally leveled for a positive Elixir trade.
 </p>
 <SpamSet />
+
+<h2 class="whitespace-initial">
+  Osteomancy's origins can be traced back to ancient civilizations where shamans
+  or diviners would use bones, often alongside other objects like shells,
+  stones, and nuts, to communicate with the spiritual realm or to divine the
+  will of the gods. For example, in ancient China, oracle bones were used for
+  divination purposes, which involved applying heat to bones or shells and
+  interpreting the resulting cracks. Similarly, in African and Native American
+  traditions, bones have been used in rituals to connect with ancestors or
+  spirits for guidance.
+</h2>
+<SpamSet />
+
 <h1 class="whitespace-initial">
   DO YOU FEEL YOUR BONES? I DO. DO YOU SEE YOUR BONES? I DO. DO YOU LIKE YOUR
   BONES? I DO. YOUR BONES ARE SPECIAL, I KNOW. MY BONES WERE SPECIAL ONCE TOO.
@@ -345,6 +380,48 @@
   IF I BORROWED YOURS, WOULD YOU? AFTER ALL, WHAT'S AMISS WITH A FEW MISSING
   BONES WHEN YOU HAVE SO MANY TO START?
 </h1>
+<SpamSet />
+
+<p class="whitespace-initial">
+  From the moment I understood the weakness of my flesh, it disgusted me. I
+  craved the strength and certainty of steel. I aspired to the purity of the
+  Blessed Machine. Your kind cling to your flesh, as though it will not decay
+  and fail you. One day the crude biomass you call the temple will wither, and
+  you will beg my kind to save you. But I am already saved, for the Machine is
+  immortal... even in death I serve the Omnissiah.
+</p>
+<SpamSet />
+
+<h3 class="whitespace-initial">
+  The method of osteomancy varies widely between cultures. In some practices,
+  the bones might be thrown onto the ground, and their positions and proximity
+  to each other interpreted. In others, specific bones might be sought for
+  particular symbols or signs engraved on them over time. Some common
+  interpretations involve the direction the bones face, the patterns formed, and
+  the nature of the marks on the bones. Additionally, the type of bone used can
+  also have significance, with different bones representing different aspects of
+  life or questions being asked.
+</h3>
+<SpamSet />
+
+<h1 class="whitespace-initial">
+  When I was 11 I tried to break my wrist to get out of a summer camp. Let me
+  tell you, its not worth it. Theres so many ways to get out of something
+  without breaking bones.
+</h1>
+<SpamSet />
+
+<p class="whitespace-initial" data-cite="Encyclopædia Britannica | Catacomb">
+  In the early Christian communities of the Roman Empire, catacombs served a
+  variety of functions in addition to burial. Funeral feasts were celebrated in
+  family vaults on the day of burial and on anniversaries. The Eucharist, which
+  accompanied funerals in the early Christian church, was celebrated there. In
+  some catacombs, larger halls and connected suites of chapels were, in effect,
+  shrines for devotions to saints and martyrs. A famous example is the Triclia
+  in the catacomb of St. Sebastian, to which countless pilgrims came to partake
+  of memorial meals (refrigeria) in honour of Saints Peter and Paul and to
+  scratch prayers to them on the walls.
+</p>
 <SpamSet />
 
 <div class="fixed right-0 top-0 text-red">{g_t}</div>
