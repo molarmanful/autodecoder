@@ -13,6 +13,9 @@
     src="{randitem([
       // `https://source.unsplash.com/random/${rsz()}x${rsz()}#${Date.now()}`,
       // `https://source.unsplash.com/random/${rsz()}x${rsz()}?bones,skeleton#${Date.now()}`,
+      `https://baconmockup.com/${rsz()}/${rsz()}`,
+      `https://placebeard.it/${rsz()}/${rsz()}/notag`,
+      `https://bingw.jasonzeng.dev/?index=random&w=${rsz()}`,
       `https://loremflickr.com/${rsz()}/${rsz()}/bones,skeleton`,
       `https://picsum.photos/${rsz()}/${rsz()}`,
     ])}#{Date.now()}"
