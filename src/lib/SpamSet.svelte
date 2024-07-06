@@ -10,10 +10,11 @@
 {#each new Array(randint(b) + a) as _}
   <ImgSpam
     alt="test"
-    src={randitem([
-      `https://source.unsplash.com/random/${rsz()}x${rsz()}#${Date.now()}`,
-      `https://source.unsplash.com/random/${rsz()}x${rsz()}?bones,skeleton#${Date.now()}`,
+    src="{randitem([
+      // `https://source.unsplash.com/random/${rsz()}x${rsz()}#${Date.now()}`,
+      // `https://source.unsplash.com/random/${rsz()}x${rsz()}?bones,skeleton#${Date.now()}`,
+      `https://loremflickr.com/${rsz()}/${rsz()}/bones,skeleton`,
       `https://picsum.photos/${rsz()}/${rsz()}`,
-    ])}
+    ])}#{Date.now()}"
   />
 {/each}
