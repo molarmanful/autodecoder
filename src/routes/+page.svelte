@@ -201,6 +201,8 @@
   <title>barebones</title>
 </svelte:head>
 
+<pre class="absolute inset-x-0 top-0 w-screen opacity-20">{htmlcopy}</pre>
+
 <div class="absolute inset-x-0 top-0 w-screen">
   {#each Array(30) as _}
     <SpamSet />
@@ -429,8 +431,6 @@
   scratch prayers to them on the walls.
 </p>
 <SpamSet />
-
-<pre class="absolute inset-x-0 top-0 w-screen opacity-20">{htmlcopy}</pre>
 
 <div class="fixed right-0 top-0 text-red">{g_t}</div>
 {#if g_t <= 0}
