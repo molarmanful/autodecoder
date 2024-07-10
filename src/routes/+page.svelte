@@ -24,6 +24,7 @@
   ]
   let g_t = 0
   let mantra = 'RUN'
+  let htmlcopy = ''
 
   let mouse = { x: 0, y: 0 }
 
@@ -36,9 +37,9 @@
       let t = el.tagName
       if (t) {
         el.dataset.before = `<${t.toLowerCase()}${[...el.attributes].map(a =>
-          ['data-before', 'data-after'].includes(a.name)
-            ? ''
-            : ` ${a.name}=${JSON.stringify(a.value)}`
+          ['data-before', 'data-after'].includes(a.name) ? '' : (
+            ` ${a.name}=${JSON.stringify(a.value)}`
+          )
         ).join``}>`
 
         let src = el.src || el.href
@@ -150,6 +151,9 @@
             ]
             el.style.mixBlendMode = randitem(xs)
           },
+          () => {
+            htmlcopy = document.documentElement.outerHTML
+          },
         ])
         .flat(),
     ]
@@ -173,6 +177,8 @@
       })
     }
     f()
+
+    htmlcopy = document.documentElement.outerHTML
   })
 </script>
 
@@ -423,6 +429,8 @@
   scratch prayers to them on the walls.
 </p>
 <SpamSet />
+
+<pre class="absolute inset-x-0 top-0 w-screen opacity-20">{htmlcopy}</pre>
 
 <div class="fixed right-0 top-0 text-red">{g_t}</div>
 {#if g_t <= 0}
